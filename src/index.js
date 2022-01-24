@@ -1,17 +1,18 @@
 //Gets Tasks List 
-const getsList = function (){
-   return document.getElementById("tasks")
-}
+const getsList = function (element){
+   let tasks = document.getElementById("tasks")
+  tasks.append(element)
+  }
 //Makes new task
-let newTask = function (input){
-  //Creating the new element
-  let newElement = document.createElement("il")//.appendChild('il').innerText(`${imput}`)
-  let ModElement = newElement.getsList().append()
-  return ModElement.innerText(`${input}`)
-  //return getsList().appendChild('il')
+const newTask = function (input){
+  let newElement = document.createElement("il")
+  getsList(newElement)
+  return newElement.innerText = input
 
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  //document.addEventListener("click", )
+  
+  document.addEventListener("submit", newTask)
+  "submit".preventDefault();
 });
